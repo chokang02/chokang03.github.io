@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>THE BLACK SKIRTS</h1>
+    <p>Jo Hyu-il better known as The Black Skirts</p>
+    <p>
+        THE BLACK SKIRTS
+        <a href="the/index.html" class="href">THE</a>
+        BLACK SKIRTS THE
+        <a href="black/index.html" class="href">BLACK</a>
+        SKIRTS THE BLACK
+        <a href="skirts/index.html" class="href">SKIRTS</a>
+        THE BLACK SKIRTS
+        
+        <p>THE BLACK
+            <a href="skirts/index.html" class="href">SKIRTS</a> 
+            THE BLACK SKIRTS
+            <a href="the/index.html" class="href">THE</a> 
+            BLACK SKIRTS THE
+            <a href="black/index.html" class="href">BLACK</a>
+            SKIRTS THE BLACK SKIRTS</p>
+            
+            <p>THE
+                <a href="black/index.html" class="href">BLACK</a> 
+                SKIRTS THE BLACK
+                <a href="skirts/index.html" class="href">SKIRTS</a>
+                THE BLACK SKIRTS
+                <a href="the/index.html" class="href">THE</a>
+                BLACK SKIRTS THE BLACK SKIRTS</p>
+
+
+            <p>
+                THE BLACK SKIRTS
+                <a href="the/index.html" class="href">THE</a>
+                BLACK SKIRTS THE
+                <a href="black/index.html" class="href">BLACK</a>
+                SKIRTS THE BLACK
+                <a href="skirts/index.html" class="href">SKIRTS</a>
+                THE BLACK SKIRTS
+                
+                <p>THE BLACK
+                    <a href="skirts/index.html" class="href">SKIRTS</a> 
+                    THE BLACK SKIRTS
+                    <a href="the/index.html" class="href">THE</a> 
+                    BLACK SKIRTS THE
+                    <a href="black/index.html" class="href">BLACK</a>
+                    SKIRTS THE BLACK SKIRTS</p>
+                    
+                    <p>THE
+                        <a href="black/index.html" class="href">BLACK</a> 
+                        SKIRTS THE BLACK
+                        <a href="skirts/index.html" class="href">SKIRTS</a>
+                        THE BLACK SKIRTS
+                        <a href="the/index.html" class="href">THE</a>
+                        BLACK SKIRTS THE BLACK SKIRTS</p>
+        
+
+
+    </p>
+    <script>
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        var links = document.querySelectorAll('.href');
+        links.forEach(function(link) {
+            link.style.color = getRandomColor();
+        });
+    </script>
+</body>
+</html>
+
+
+
+

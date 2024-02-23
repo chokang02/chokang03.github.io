@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>THE BLACK SKIRTS</h1>
+    <p>Jo Hyu-il (Korean: 조휴일; born 1982),
+        better known as The Black Skirts (Korean: 검정치마), is an indie rock musician based in South Korea.
+        In 2010, he released his debut album,
+        <a href="../album_names/201/index.html" class="href" id="number">201</a>,
+        which won Best Modern Rock Album at the 2010 Korean Music Awards.
+        He has since released the albums,
+        <a href="../album_names/dont_you_worry_baby/index.html" class="href">Don't You Worry Baby</a>
+        (I'm Only Swimming) (2011),
+        <a href="../album_names/team_baby/index.html" class="href">Team Baby</a> (2017),
+        <a href="../album_names/thirsty/index.html" class="href">Thirsty</a> (2019) and
+        <a href="../album_names/team_troubles/index.html" class="href">Teen Troubles</a> (2022).
+    </p>
+
+    <script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

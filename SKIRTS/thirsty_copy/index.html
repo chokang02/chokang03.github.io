@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+    <h3>Track List</h3>
+
+
+    <h4>DISK(CD) 1.</h4>
+    <p><a href="../thirsty_copy/wrong_question/index.html" class="href">01. Wrong Question틀린질문</a></p>
+    <p>02. Lester Burnham</p>
+    <p><a href="../thirsty_copy/island/index.html" class="href">03. Island 섬 (Queen of Diamonds)</a></p>
+    <p>04. Sangsu Station 상수역</p>
+    <p><a href="../thirsty_copy/mad_dog_diary/index.html" class="href">05. Mad Dog Diary 광견일기</a></p>
+    <p><a href="../thirsty_copy/bollywood/index.html" class="href">06. Bollywood</a></p>
+    <p><a href="../thirsty_copy/holiday/index.html" class="href">07. Holiday 빨간나를</a></p>
+    <p>08. Put Me On Drugs</p>
+    <p>09. Hawaiian Black Sand 하와이 검은 모래</p>
+    <p>10. Thinner than water맑고 묽게</p>
+    <p>11. My shadow 그늘은 그림자로</p>
+    <p>12. Blood and Thirst 피와 갈증 (King of Hurts)</p>
+
+
+    <script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

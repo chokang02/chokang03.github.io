@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavy Rain</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        .letter {
+            position: absolute;
+            animation: fallAnimation 3s linear infinite;
+        }
+        
+        @keyframes fallAnimation {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Heavy Rain</h1>
+    <p id="rainText">Say yes, say yes<br>
+        Please girl just say yes<br>
+        I need to hear it from you<br>
+        I know it's him, did he touch your skin?<br>
+        Tell me when did it all began<br>
+        I need to hear it from you<br>
+        You know he's going away<br>
+        When the summer ends<br>
+        He won't even remember your name<br>
+        How can you ask me to stay only a friend<br>
+        Then show me how to put out this flame<br>
+        Take me back to your swamp<br>
+        Hold me down till I drown<br>
+        Take me back to your playground<br>
+        I'll be lost and never found<br>
+        I would die for you<br>
+        I would die for you<br>
+        I would die for you<br>
+        I would die for you</p>
+
+    <script>
+        const text = document.getElementById('rainText').innerText.trim();
+        const textContainer = document.getElementById('rainText');
+        const count = text.length;
+        const duration = 3;
+
+        for (let i = 0; i < count; i++) {
+            const letter = document.createElement('span');
+            letter.textContent = text[i];
+            letter.classList.add('letter');
+            letter.style.left = `${Math.random() * 100}vw`;
+            letter.style.animationDuration = `${Math.random() * duration + 1}s`;
+            textContainer.appendChild(letter);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3><a href="../team_baby_copy/index.html" class="href" id="number">TEAM BABY</a></h3>
+    <p>Team Baby is the third studio album by South Korean rock musician The Black Skirts.
+        The album was released on 30 May 2017. The album was nominated for album of the
+        year at the 2018 Korean Music Awards.</p>
+        <p>n 2016, The Black Skirts signed with label HIGHGRND, where Tablo is the owner.
+            The album cover is a wedding photo of his parents, and The Black Skirts described
+            the album as "going to be a very mature album."</p>
+              <p>Park Sangjoon of Music Y said "It's hard to pick only the best one song in
+                Team Baby. As such, all songs are beautiful and boast excellent
+                completeness." Kang Minjeong of IZM reviewed "Despite filling most songs
+                with the theme of common love, the reason why they are not burdened or bitten
+                is because of their unique dry texture."</p>
+
+                      <h4>Released</h4>	<p>May 30, 2017</p>
+                      <h4>Genre</h4>	<p>Indie rock, indie pop</p>
+                      <h4>Length</h4>	<p>40:42</p>
+                      <h4>Label</h4>	<p>HIGHGRND</p>
+                      <h4>Producer</h4>	<p>Kim Seongsoo, The Black Skirts</p>
+
+</body>
+</html>
+
+<script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

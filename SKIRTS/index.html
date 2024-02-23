@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<h1><a href="../SKIRTS/thirstyforthewin/index.html" class="href">THIRSTY</a></h1>
+<h1><a href="../SKIRTS/teambabyforthewin/index.html" class="href">TEAM BABY</a></h1>
+
+<script>
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    var links = document.querySelectorAll('.href');
+    links.forEach(function(link) {
+        link.style.color = getRandomColor();
+    });
+</script>

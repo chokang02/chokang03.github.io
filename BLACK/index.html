@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 1.5;
+            text-align: center;
+            animation: spazzing 3s infinite alternate; /* Apply animation */
+        }
+
+        /* Define the animation */
+        @keyframes spazzing {
+            0% {
+                color: #f1f0f0; /* Initial color */
+            }
+            50% {
+                color: #74aefb; /* Flash color */
+            }
+            100% {
+                color: #f1f0f0; /* Back to initial color */
+            }
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>BACKGROUND</h3>
+    <p>Jo was born in Seoul, South Korea, on December 5, 1982.
+        He moved to the United States when he was 12 years old and grew up in New Jersey.
+        His musical taste was influenced at an early age by what he would learn from
+        American music media such as MTV and Rolling Stone. He was also heavily influenced
+        by Alanis Morissette's Jagged Little Pill and the first album he ever purchased was
+        Michael Jackson's Dangerous.</p>
+    <p>In 2004, Jo formed a three-member punk rock band called Castel Prayon while living in New York City.
+        The band eventually dissolved as members went on to pursue their individual endeavors,
+        leaving Jo to become a one-man band.
+        In 2006, Jo returned to South Korea and began making music as a one-man band under the name,
+        The Black Skirts. In 2009, Jo released an unofficial album titled
+        My Feet Don't Touch the Ground (And I Am So Winded I Can't Sing for You Today).
+        In 2010, Jo gained notoriety in the Korean indie rock scene upon releasing
+        <a href="../album_names/201/index.html" class="href" id="number">201</a>,
+        his first album as The Black Skirts Produced by Kia Eshghi. The album was
+        recorded in his basement. Later that year, he won Best Modern Rock Album at
+        the Korean Music Awards. A special edition of
+        <a href="../album_names/201/index.html" class="href" id="number">201</a>
+        was released on March 18, 2010.
+        On July 13, 2011, Jo released his second album,
+        <a href="../album_names/dont_you_worry_baby/index.html" class="href">Don't You Worry Baby</a>
+         (I'm Only Swimming).
+        On January 7, 2016, Jo signed to Highgrnd. On May 30, 2017, Jo released his third
+        album part 1, <a href="../album_names/team_baby/index.html" class="href" id="number">Team Baby</a>,
+         whose album cover features Jo's parents. He announced that this
+        album is composed of three parts.
+        In 2018, Jo left Highgrnd and started working under his own company Doggy Rich.
+        On February 12, 2019, Jo released his third album part 2,
+        <a href="../album_names/thirsty/index.html" class="href">Thirsty</a>
+        , with his label partner
+        Bespok. Two years later, Jo released an English-language EP titled
+        <a href="../album_names/good_luck_to_you/index.html" class="href">Good Luck To You,
+            Girl Scout!</a>. The EP was said to be “inspired by my friends who got dumped last
+        summer during the height of Corona Virus.”</p>
+</body>
+</html>
+
+<script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

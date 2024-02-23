@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+    <h3>Track List</h3>
+
+
+    <h4>DISK(CD) 1.</h4>
+    <p><a href="../team_troubles/flying_bobs/index.html" class="href">01. Flying Bobs</a></p>
+    <p>02. Baptized In Fire</p>
+    <p>03. My Little Lambs</p>
+    <p><a href="../team_troubles/sunday_girl/index.html" class="href">04. Sunday Girl</a></p>
+    <p>05. Friends In Bed</p>
+    <p>06. Cicadas</p>
+    <p>07. Garden State Dreamers</p>
+    <p>08. Follow You</p>
+    <p>09. Jersey Girl</p>
+    <p>10. Love You The Same</p>
+    <p>11. Powder Blue</p>
+    <p>12. Electra</p>
+    <p><a href="../team_troubles/min/index.html" class="href">13. Min</a></p>
+    <p>14. Jeff & Alana</p>
+    <p><a href="../team_troubles/ling_ling/index.html" class="href">15. Ling Ling</a></p>
+    <p><a href="../team_troubles/john_fry/index.html" class="href">16. John Fry</a></p>
+    <p>17. 99%</p>
+    <p>18. Our Own Summer</p>
+
+
+    <script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

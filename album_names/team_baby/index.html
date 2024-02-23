@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+    <h3>Track List</h3>
+
+
+    <h4>DISK(CD) 1.</h4>
+    <p>01. 난 아니에요</p>
+    <p>02. Big Love</p>
+    <p>03. Diamond</p>
+    <p>04. Love Is All</p>
+    <p><a href="../team_baby/inmycityseoul/index.html" class="href">05. In My City of Seoul 내 고향 서울엔</a></p>
+    <p>06. 푹죽과 풍선들</p>
+    <p>07. 1:05</p>
+    <p><a href="../team_baby/narang/index.html" class="href">08. Who Do You Love 나랑 아니면</a></p>
+    <p><a href="../team_baby/Heya/index.html" class="href">09. Heya</a></p>
+    <p><a href="../team_baby/EVERTHING/index.html" class="href">10. EVERYTHING</a></p>
+
+
+    <script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

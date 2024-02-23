@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h3><a href="../thirsty_copy/index.html" class="href" id="number">THIRSTY</a></h3>
+    <p>Thirsty is the fourth studio album by South Korean indie rock artist The Black Skirts.
+        The album was released on 12 February 2019. The album won the best modern rock album at the
+        2020 Korean Music Awards.</p>
+        <p>Thirsty is the second album in the "love trilogy" of The Black Skirts.
+            He expressed that the album contains the most "The Black Skirts-like music" about
+            what people go through and what they can do, and he released Queen of Diamonds (섬)
+             as a teaser before the album's release. Some sexual flagrant lyrics in
+              some tracks on the album caused controversy.</p>
+              <p>Kim Doheon of IZM reviewed "Having reassured everyone with sweet words, he now brings
+                 out his hungry desire, saying, "A black heart just comes out of my mouth."
+                 Thirsty is a devastated love, a lively grotesque tragedy."
+                  Jeonjainhyeong of Music Y described the album as "Just as Joker is more
+                   attractive than Batman and Darth Vader is more attractive than Anakin,
+                    the scenery shown by Thirsty is a rare sight in Korean music.
+                     This is where The Black Skirts talked about the brazen grotesque, and why he
+                      does not sink and continues to exert influence in the contemporary music world."</p>
+
+                      <h4>Released</h4>	<p>February 12, 2019</p>
+                      <h4>Genre</h4>	<p>Indie rock</p>
+                      <h4>Length</h4>	<p>48:32</p>
+                      <h4>Label</h4>	<p>BESPOK</p>
+                      <h4>Producer</h4>	<p>The Black Skirts</p>
+
+</body>
+</html>
+
+<script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

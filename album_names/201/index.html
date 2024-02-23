@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<p>It is one of the classic albums that symbolizes Korea's second-generation indie scene,
+    and is still considered Black Skirts' best work, even though Black Skirts has
+    released five full-length albums. Overall, it is based on the rough punk rock of the
+    British and American camps, and is an album that shows exotic yet sophisticated musicality
+    by mixing the melodic guitar pop of the Strokes or Suede with the soft modern rock
+    sensibility of the Korean indie scene. With this album, Black Skirt was nominated in
+    five categories at the 2010 Korean Music Awards, winning the Best Modern Rock Album
+    award.
+
+    You can't listen to it on music sites, but it's because he left Ruby Salon,
+     which was his agency at the time. So, you can listen to the 201 Special Edition,
+      in which 201 is remastered + bonus tracks are added. The widely known album art
+      is also 201 Special Edition.
+    
+    Because of the swear words in Tangled, the 201 album was rated 19 gold.
+    When Hyang Music ONLY was sold, it was not a 19+ album. It appears that the 19+ label
+    was probably attached during the official distribution process.
+    
+    The album name refers to the area code of New Jersey, where Jo Hyu-il lived.</p>
+
+    <h3>Track List</h3>
+    <h4>DISK(CD) 1.</h4>
+    <p><a href="../201/joahaejo/index.html" class="href">01. 좋아해줘</a></p>
+    <p>02. Stand Still</p>
+    <p>03. 강아지</p>
+    <p>04. 상아</p>
+    <p><a href="../201/antifreeze/index.html" class="href">(2017)05. Antifreeze</a></p>
+    <p>06. Tangled</p>
+    <p>07. Avant Garde Kim</p>
+    <p>08. Le Fou Muet</p>
+    <p><a href="../201/dientes/index.html" class="href">09. Dientes</a></p>
+    <p>10. Kiss And Tell</p>
+    <p>11. [Bonus Track] Stand still ('07 korean version)</p>
+    <p>12. [Bonus Track] Fling; Fig from france</p>
+    <p>13. [Bonus Track] I like watching you go</p>
+
+
+    <script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>

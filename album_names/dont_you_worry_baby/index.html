@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<h3>Track List</h3>
+
+<p>DISK(CD) 1.</p>
+<p>01. 이별노래</p>
+<p>02. 무임승차</p>
+<p><a href="../dont_you_worry_baby/love_shine/index.html" class="href">03. Love Shine『타이틀 곡』</a></p>
+<p>04. 외아들</p>
+<p><a href="../dont_you_worry_baby/international_love_song/index.html" class="href">05. International Love Song</a></p>
+<p>06. 날씨</p>
+<p>07. 아침식사</p>
+<p>08. 음악하는 여자</p>
+<p>09. 젊은 우리 사랑</p>
+<p>10. Ariel</p>
+<p>11. 기사도</p>
+<p>12. 앵무새</p>
+
+<script>
+    function getRandomPastelColor() {
+        var r = Math.floor(Math.random() * 106) + 150; 
+        var g = Math.floor(Math.random() * 106) + 150; 
+        var b = Math.floor(Math.random() * 106) + 150;
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var links = document.querySelectorAll('.href');
+        links.forEach(function(link) {
+            link.style.color = getRandomPastelColor();
+        });
+    });
+</script>
+</body>
+</html>

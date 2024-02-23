@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Navigation</title>
+    <style>
+        body {
+            background-color: #1f1f1f;
+            color: #f1f0f0; 
+            font-family: Helvetica, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 2;
+            text-align: center;
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        
+        }
+        .href {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 10px 0;
+            white-space: pre-wrap;
+        }
+        .korean {
+            font-family: "Nanum Gothic", sans-serif;
+        }
+        .glitter {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<p>A little over two years since THIRSTY, The Black Skirts returns with a full English-language
+     EP called Good Luck To You, Girl Scout!.
+      From The Black Skirts Facebook page, the EP was “inspired by my friends who got dumped
+       last summer during the height of Corona Virus.” Listening through the EP,
+        you get his signature indie pop and indie rock style mixed with some very aggressive
+         verses hidden in the lo-fi melodies..</p>
+
+    <h3>Track List</h3>
+    <h4>DISK(CD) 1.</h4>
+    <p>01. Kleenex</p>
+    <p><a href="../good_luck_to_you/two_days/index.html" class="href">02. Two Days</a></p>
+    <p><a href="../good_luck_to_you/girl_scout/index.html" class="href">03. Girl Scout!</a></p>
+    <p><a href="../good_luck_to_you/when_i_think_of_you/index.html" class="href">04. When I Think Of You</a></p>
+    <p><a href="../good_luck_to_you/heavy_rain/index.html" class="href">05. Heavy Rain</a></p>
+    <p>06. Plain Jane</p>
+
+
+    <script>
+        function getRandomPastelColor() {
+            var r = Math.floor(Math.random() * 106) + 150; 
+            var g = Math.floor(Math.random() * 106) + 150; 
+            var b = Math.floor(Math.random() * 106) + 150;
+            return 'rgb(' + r + ',' + g + ',' + b + ')';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var links = document.querySelectorAll('.href');
+            links.forEach(function(link) {
+                link.style.color = getRandomPastelColor();
+            });
+        });
+    </script>
+</body>
+</html>
